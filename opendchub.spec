@@ -6,7 +6,7 @@ Summary:	Direct Connect Hub
 Summary(pl):	Serwer Direct Connect
 Name:		opendchub
 Version:	0.7.14
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Communications
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
@@ -15,6 +15,7 @@ URL:		http://opendchub.sf.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	perl-devel
+Requires:	perl(DynaLoader) = %(%{__perl} -MDynaLoader -e 'print DynaLoader->VERSION')
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
