@@ -1,8 +1,12 @@
+#
+# TODO:
+#
+# - please done cleanups and bump release 1,
 Summary:	Direct Connect Hub
 Summary(pl):	Serwer Direct Connect
 Name:		opendchub
 Version:	0.7.12
-Release:	0.1
+Release:	0.9
 License:	GPL
 Group:		Applications/Communications
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
