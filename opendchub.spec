@@ -17,7 +17,7 @@ Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 URL:		http://opendchub.sf.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:  perl-devel
+BuildRequires:	perl-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
