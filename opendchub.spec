@@ -23,9 +23,9 @@ oriented) using a proprietary protocol.
 
 %description -l pl
 DCTC jest klonem Direct Connect, windowsowego klienta pozwalaj±cego
-u¿ytkonikom dzieliæ pliki i rozmawiaæ (podobnie do IRC-a, ale w sposób
-bardziej zorientowany na dzielenie oprogramowania) u¿ywaj±c w³asnego
-protoko³u.
+u¿ytkownikom wspó³dzieliæ pliki i rozmawiaæ (podobnie jak na IRC-u,
+ale w sposób bardziej zorientowany na wspó³dzielenie oprogramowania),
+u¿ywaj±c w³asnego protoko³u.
 
 %prep
 %setup -q
