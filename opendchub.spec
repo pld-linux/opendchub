@@ -6,11 +6,12 @@ Summary:	Direct Connect Hub
 Summary(pl):	Serwer Direct Connect
 Name:		opendchub
 Version:	0.7.14
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/Communications
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	6121347154820e2b307a5aecafa86ce8
+Patch0:		%{name}-bufoverflow.patch
 URL:		http://opendchub.sf.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -26,6 +27,7 @@ Opendchub jest hubem sieci direct connect s³u¿±cej do wymiany plików.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__aclocal}
