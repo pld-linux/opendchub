@@ -1,19 +1,16 @@
 #
-# TODO:
-# - please done cleanups and bump release 1,
-#
 # Note:
 # - works very unstable at axp (other not tested)
 #
 Summary:	Direct Connect Hub
 Summary(pl):	Serwer Direct Connect
 Name:		opendchub
-Version:	0.7.12
-Release:	0.9
+Version:	0.7.14
+Release:	1
 License:	GPL
 Group:		Applications/Communications
 Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
-# Source0-md5:	40adff72b70ccf9cce3d6d6b744ac845
+# Source0-md5:	6121347154820e2b307a5aecafa86ce8
 URL:		http://opendchub.sf.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -49,5 +46,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README Documentation/*
+%doc AUTHORS ChangeLog NEWS README Documentation/* Samplescripts
 %attr(755,root,root) %{_bindir}/*
