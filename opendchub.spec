@@ -21,7 +21,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Opendchub is a hub of direct connect file sharing network.
 
 %description -l pl
-Opendchub jest hubem sieci direct connect s³u¿±cej do wymiany plikow. 
+Opendchub jest hubem sieci direct connect s³u¿±cej do wymiany plików. 
 
 %prep
 %setup -q
