@@ -1,7 +1,10 @@
 #
 # TODO:
-#
 # - please done cleanups and bump release 1,
+#
+# Note:
+# - works very unstable at axp (other not tested)
+#
 Summary:	Direct Connect Hub
 Summary(pl):	Serwer Direct Connect
 Name:		opendchub
