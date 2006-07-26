@@ -9,10 +9,10 @@ Version:	0.7.14
 Release:	3
 License:	GPL
 Group:		Applications/Communications
-Source0:	http://dl.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/opendchub/%{name}-%{version}.tar.gz
 # Source0-md5:	6121347154820e2b307a5aecafa86ce8
 Patch0:		%{name}-bufoverflow.patch
-URL:		http://opendchub.sf.net/
+URL:		http://opendchub.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	perl-devel
@@ -23,7 +23,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Opendchub is a hub of direct connect file sharing network.
 
 %description -l pl
-Opendchub jest hubem sieci direct connect s³u¿±cej do wymiany plików. 
+Opendchub jest hubem sieci direct connect s³u¿±cej do wymiany plików.
 
 %prep
 %setup -q
