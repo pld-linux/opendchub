@@ -63,6 +63,9 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_sysconfdir}/opendchub
 install -D %{SOURCE1} $RPM_BUILD_ROOT/etc/rc.d/init.d/%{name}
 
+%clean
+rm -rf $RPM_BUILD_ROOT
+
 %pre
 %groupadd -g 190 opendchub
 %useradd -u 190 -d /etc/opendchub -s /bin/false -c "Open DC Hub" -g opendchub opendchub
@@ -82,9 +85,6 @@ if [ "$1" = "0" ]; then
         %userremove opendchub
         %groupremove opendchub
 fi
-
-%clean
-rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
