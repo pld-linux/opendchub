@@ -1,0 +1,105 @@
+#!/bin/sh
+#
+# opendchub	Open DC Hub
+#
+# chkconfig:	345 90 10
+# description:	Open DC Hub
+# processname:	opendchub
+
+# Source function library
+. /etc/rc.d/init.d/functions
+
+# Get network config
+. /etc/sysconfig/network
+
+# Get service config - may override defaults
+[ -f /etc/sysconfig/opendchub ] && . /etc/sysconfig/opendchub
+
+# Check that networking is up.
+if is_yes "${NETWORKING}"; then
+	if [ ! -f /var/lock/subsys/network -a "$1" != stop -a "$1" != status ]; then
+		msg_network_down "Open DC Hub"
+		exit 1
+	fi
+else
+	exit 0
+fi
+
+start() {
+	# check if opendchub is already configured
+	if [ ! -d /etc/opendchub/.opendchub ]; then
+	cat <<EOF
+OpenDC is not configured yet
+run
+/etc/rc.d/init.d/opendchub init
+to configure
+EOF
+		exit 1
+	fi
+	# Check if the service is already running?
+	if [ ! -f /var/lock/subsys/opendchub ]; then
+		msg_starting "Open DC Hub"
+		opendchub \
+			-u opendchub \
+			-g opendchub \
+			-w /etc/opendchub \
+			-s
+		RETVAL=$?
+		[ $RETVAL -eq 0 ] && touch /var/lock/subsys/opendchub
+	else
+		msg_already_running "Open DC Hub"
+	fi
+}
+
+stop() {
+	# Stop daemons.
+	if [ -f /var/lock/subsys/opendchub ]; then
+		msg_stopping "Open DC Hub"
+		killproc opendchub
+		rm -f /var/lock/subsys/opendchub >/dev/null 2>&1
+	else
+		msg_not_running "Open DC Hub"
+	fi
+}
+init(){
+  	if [ -d /etc/opendchub/.opendchub ]; then
+		cat <<EOF
+Open DC Hub is already configured
+remove /etc/opendchub/.opendchub first
+EOF
+		exit 1
+	else
+		opendchub \
+			-u opendchub \
+			-g opendchub \
+			-w /etc/opendchub \
+			-s
+	fi
+}
+
+RETVAL=0
+# See how we were called.
+case "$1" in
+  start)
+  	start
+	;;
+  stop)
+  	stop
+	;;
+  restart|reload|force-reload)
+	stop
+	start
+	;;
+  status)
+	status opendchub
+	exit $?
+	;;
+  init)
+  	init
+	;;
+  *)
+	msg_usage "$0 {start|stop|restart|reload|force-reload|status|init}"
+	exit 3
+esac
+
+exit $RETVAL
