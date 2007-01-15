@@ -1,0 +1,11 @@
+--- opendchub-0.7.15/configure.in~	2003-11-10 16:07:32.000000000 +0100
++++ opendchub-0.7.15/configure.in	2007-01-15 11:40:31.735397119 +0100
+@@ -10,7 +10,7 @@
+ 
+ dnl Checks for libraries.
+ AC_CHECK_LIB(socket, socket)
+-AC_CHECK_LIB(nsl, gethostbyname)
++# AC_CHECK_LIB(nsl, gethostbyname)
+ AC_CHECK_LIB(crypt, crypt)
+ AC_CHECK_LIB(crypto, crypt)
+ 
