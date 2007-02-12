@@ -3,7 +3,7 @@
 # - works very unstable at axp (other not tested)
 #
 Summary:	Direct Connect Hub
-Summary(pl):	Serwer Direct Connect
+Summary(pl.UTF-8):   Serwer Direct Connect
 Name:		opendchub
 Version:	0.7.15
 Release:	1
@@ -36,8 +36,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Opendchub is a hub of direct connect file sharing network.
 
-%description -l pl
-Opendchub jest hubem sieci direct connect s³u¿±cej do wymiany plików.
+%description -l pl.UTF-8
+Opendchub jest hubem sieci direct connect sÅ‚uÅ¼Ä…cej do wymiany plikÃ³w.
 
 %prep
 %setup -q
