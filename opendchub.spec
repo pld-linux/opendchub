@@ -3,7 +3,7 @@
 # - works very unstable at axp (other not tested)
 #
 Summary:	Direct Connect Hub
-Summary(pl.UTF-8):   Serwer Direct Connect
+Summary(pl.UTF-8):	Serwer Direct Connect
 Name:		opendchub
 Version:	0.7.15
 Release:	1
