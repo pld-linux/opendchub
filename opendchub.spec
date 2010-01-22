@@ -28,7 +28,7 @@ Requires(pre):	/bin/id
 Requires(pre):	/usr/bin/getgid
 Requires(pre):	/usr/sbin/groupadd
 Requires(pre):	/usr/sbin/useradd
-Requires:	perl(DynaLoader) = %(%{__perl} -MDynaLoader -e 'print DynaLoader->VERSION')
+Requires:	perl(DynaLoader) = %(%{__perl} -MDynaLoader -e 'print DynaLoader->VERSION' || echo ERROR)
 Provides:	group(clamav)
 Provides:	user(clamav)
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
