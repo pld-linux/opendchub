@@ -6,7 +6,7 @@ Summary:	Direct Connect Hub
 Summary(pl.UTF-8):	Serwer Direct Connect
 Name:		opendchub
 Version:	0.7.15
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Communications
 Source0:	http://dl.sourceforge.net/opendchub/%{name}-%{version}.tar.gz
